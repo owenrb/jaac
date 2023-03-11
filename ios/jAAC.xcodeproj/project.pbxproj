@@ -28,6 +28,7 @@
 		4964D97829B6FABE00AB380D /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 490D945429B6AF7000624735 /* Octicons.ttf */; };
 		4964D97929B6FABE00AB380D /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 490D945829B6AF7000624735 /* SimpleLineIcons.ttf */; };
 		4964D97A29B6FABE00AB380D /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 490D945A29B6AF7000624735 /* Zocial.ttf */; };
+		497F0F2129BC81B5007D8838 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 497F0F2029BC81B5007D8838 /* main.jsbundle */; };
 		7699B88040F8A987B510C191 /* libPods-jAAC-jAACTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-jAAC-jAACTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		490D945E29B6AF7000624735 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		490D945F29B6AF7000624735 /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		490D946029B6AF7000624735 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		497F0F2029BC81B5007D8838 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; name = main.jsbundle; path = jaac/main.jsbundle; sourceTree = "<group>"; };
 		4984491029B96D52004C9B63 /* jAAC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = jAAC.entitlements; path = jAAC/jAAC.entitlements; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-jAAC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jAAC.release.xcconfig"; path = "Target Support Files/Pods-jAAC/Pods-jAAC.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-jAAC-jAACTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jAAC-jAACTests.debug.xcconfig"; path = "Target Support Files/Pods-jAAC-jAACTests/Pods-jAAC-jAACTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				497F0F2029BC81B5007D8838 /* main.jsbundle */,
 				13B07FAE1A68108700A75B9A /* jAAC */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* jAACTests */,
@@ -300,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				497F0F2129BC81B5007D8838 /* main.jsbundle in Resources */,
 				4964D96B29B6FABE00AB380D /* AntDesign.ttf in Resources */,
 				4964D96C29B6FABE00AB380D /* Entypo.ttf in Resources */,
 				4964D96D29B6FABE00AB380D /* EvilIcons.ttf in Resources */,
@@ -338,7 +342,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
+			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n\n";
 		};
 		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -563,6 +567,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = jAAC/jAAC.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 46ZRMG96XR;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = jAAC/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = jAAC;
@@ -592,6 +597,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = jAAC/jAAC.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 46ZRMG96XR;
 				INFOPLIST_FILE = jAAC/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = jAAC;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";

@@ -26,10 +26,11 @@ export default BiometricButton = () => {
       .then(resultObject => {
         const { success } = resultObject
 
-        // if (success) {
-        //   const password = moment().format('YYYY')
-        //   dispatch(loginUser({ password }))
-        // }
+        if (success) {
+          const type = 'auth/status'
+          const payload = { authenticated: true }
+          dispatch({ type, payload })
+        }
       })
       .catch(() => {
         console.log('biometrics failed')

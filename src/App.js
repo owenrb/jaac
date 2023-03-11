@@ -69,7 +69,10 @@ const App = props => {
             }}
             listeners={{
               tabPress: e => {
-                console.log('HOME pressed')
+                const type = 'auth/status'
+                const payload = { authenticated: false }
+
+                dispatch({ type, payload })
               },
             }}
           />
