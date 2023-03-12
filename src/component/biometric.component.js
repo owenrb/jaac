@@ -4,7 +4,9 @@ import { Text } from 'react-native'
 import ReactNativeBiometrics from 'react-native-biometrics'
 import { useDispatch } from 'react-redux'
 
-const rnBiometrics = new ReactNativeBiometrics({ allowDeviceCredentials: true })
+const rnBiometrics = new ReactNativeBiometrics({
+  allowDeviceCredentials: true,
+})
 
 export default BiometricButton = () => {
   const dispatch = useDispatch()
@@ -22,7 +24,7 @@ export default BiometricButton = () => {
 
   const simplePrompt = async () => {
     rnBiometrics
-      .simplePrompt({ promptMessage: 'Confirm fingerprint' })
+      .simplePrompt({ promptMessage: 'Confirm biometric login' })
       .then(resultObject => {
         const { success } = resultObject
 

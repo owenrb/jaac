@@ -15,7 +15,7 @@ const HomeScreen = ({ route, auth }) => {
   console.log({ auth })
 
   return (
-    <Tab.Navigator>
+    <Tab.Navigator initialRouteName="Me">
       {authenticated || !editMode ? null : (
         <Tab.Screen
           name="Login"
@@ -34,7 +34,7 @@ const HomeScreen = ({ route, auth }) => {
 
       {!authenticated && editMode ? null : (
         <Tab.Screen
-          name="Expression"
+          name="Mood"
           component={TemplateScreen}
           initialParams={{ ...params, tab: 'expression' }}
         />
